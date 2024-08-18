@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Home page</title>
+</head>
+<body>
+<h2>Hello world!</h2>
+<p>
+    User: <span sec:authentication="principal.username"></span>
+    <br>
+    Roles: <span sec:authentication="principal.authorities"></span>
+</p>
+<br>
+<hr>
+<div>
+    <span>Some test Some test Some test Some test Some test </span><br>
+    <span>Some test Some test Some test Some test Some test </span><br>
+    <span>Some test Some test Some test Some test Some test </span>
+</div>
+<hr>
+
+<form action="#" th:action="@{logout}" method="post">
+    <input type="submit" value="Exit">
+</form>
+
+
+</body>
+</html>
